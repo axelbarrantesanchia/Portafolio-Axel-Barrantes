@@ -102,15 +102,6 @@ padding: 1% 0% 0% 15%;
 .principal_enlances_link:hover{
     background-color: var(--color-hover)
 }
-.footer{
-    background-color: var(--color-terciario);
-    padding: 24px;
-    color: var(--color-primario);
-    text-align: center;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.0rem;
-    font-weight: 500;
-}
 
 .imagenaxel{
     width: 488px;
