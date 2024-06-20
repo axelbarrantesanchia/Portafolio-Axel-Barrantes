@@ -43,7 +43,7 @@ padding: 1% 0% 0% 15%;
 .principal {
     display: flex;
     align-items: center;
-    margin: 2% 15%;
+    margin: 1% 15%;
     justify-content: space-between;
     gap: 82px;
 }
