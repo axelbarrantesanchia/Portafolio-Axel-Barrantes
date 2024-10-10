@@ -133,3 +133,116 @@ body {
         gap: 10px; /* Reduce el espacio entre elementos */
     }
 }
+/* Estilos generales para las secciones */
+.section {
+    padding: 2rem 5%;
+    margin-bottom: 2rem;
+    background-color: var(--color-primario);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos de las secciones */
+.section-title {
+    font-size: 1.8rem;
+    font-family: var(--fuente-krona);
+    color: var(--color-terciario);
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Estilo para listas dentro de las secciones */
+.section-list {
+    list-style-type: none;
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-secundario);
+}
+
+.section-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos específicos para la sección de contacto */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.contact-info a {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    color: var(--color-secundario);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--color-terciario);
+}
+
+.contact-info p {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+}
+
+/* Estilos para la experiencia laboral */
+.experience-item {
+    margin-bottom: 1.5rem;
+}
+
+.experience-item-title {
+    font-size: 1.4rem;
+    font-family: var(--fuente-krona);
+    color: var(--color-terciario);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item-dates {
+    font-family: var(--fuente-montserrat);
+    font-size: 0.9rem;
+    color: var(--color-secundario);
+    margin-bottom: 0.5rem;
+}
+
+.experience-item-description {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-secundario);
+}
+
+/* Estilos específicos para las referencias */
+.references {
+    font-family: var(--fuente-montserrat);
+    font-size: 1rem;
+    color: var(--color-secundario);
+    line-height: 1.6;
+}
+
+.references li {
+    margin-bottom: 0.5rem;
+}
+
+.references a {
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.references a:hover {
+    text-decoration: underline;
+}
+
+/* Adaptación móvil */
+@media (max-width: 575px) {
+    .section {
+        padding: 2rem 3%;
+    }
+    .section-title {
+        font-size: 1.5rem;
+    }
+    .section-list {
+        font-size: 0.9rem;
+    }
+}
