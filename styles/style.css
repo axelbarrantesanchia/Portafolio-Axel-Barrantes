@@ -13,22 +13,22 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
 }
 
 body {
     background-color: var(--color-primario);
     color: var(--color-secundario);
-    overflow: hidden; /* Evita el desplazamiento */
+    overflow-x: hidden; /* Oculta el desbordamiento horizontal */
 }
 
 .header {
-    padding: 1% 0% 0% 15%;
+    padding: 1% 0 0 15%; /* Espaciado superior, ajustado para más consistencia */
 }
 
 .header_menu {
     display: flex;
-    gap: 80px;
+    gap: 80px; /* Espaciado entre los enlaces */
 }
 
 .header_menu_link {
@@ -40,21 +40,22 @@ body {
 }
 
 .header_menu_link:hover {
-    color: var(--color-hover); /* Color del texto al pasar el cursor */
-    background-color: var(--color-terciario); /* Color de fondo al pasar el cursor */
-    border-radius: 4px; /* Radio de borde para el efecto de fondo */
+    color: var(--color-hover);
+    background-color: var(--color-terciario);
+    border-radius: 4px;
 }
 
 .principal {
     display: flex;
     align-items: center;
-    margin: 1% 15%;
+    margin: 1% 15%; /* Espaciado alrededor del contenedor principal */
     justify-content: space-between;
     gap: 82px;
+    overflow: hidden; /* Evita el desbordamiento en el contenedor principal */
 }
 
 .principal_contenido {
-    width: auto;
+    flex: 1; /* Permite que el contenido ocupe el espacio disponible */
     display: flex;
     flex-direction: column;
     gap: 40px;
@@ -76,7 +77,6 @@ body {
 
 .principal_links {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -84,7 +84,8 @@ body {
 
 .principal_enlances_link {
     display: flex;
-    width: 50%;
+    width: 100%; /* Se asegura de que el enlace ocupe el ancho completo */
+    max-width: 300px; /* Limita el ancho máximo para evitar el desbordamiento */
     text-align: center;
     padding: 1.5px 0;
     border-radius: 8px;
@@ -108,17 +109,9 @@ body {
     background-color: var(--color-hover);
 }
 
-.imagenaxel {
-    width: 488px;
-}
-
-.class_principal_parrafo2 {
-    font-size: 25.3px;
-    font-family: var(--fuente-montserrat);
-}
-
 .presentacion__imagen {
-    width: 50%;
+    width: 50%; /* Ajuste el tamaño para que no desborde */
+    max-width: 488px; /* Limita el tamaño máximo de la imagen */
 }
 
 @media (max-width: 575px) {
@@ -127,15 +120,15 @@ body {
     }
     .header_menu {
         justify-content: center;
+        flex-wrap: wrap; /* Permite que los elementos se ajusten en línea */
     }
     .principal {
         flex-direction: column-reverse;
+        margin: 1% 5%; /* Reduce el margen en pantallas pequeñas */
     }
-
     .principal_enlances_link {
-        width: 100%; /* Asegúrate de que se ajuste en pantallas pequeñas */
+        width: 100%; /* Asegura que el enlace ocupe todo el ancho disponible */
     }
-
     .principal_contenido {
         gap: 20px; /* Reduce el espacio entre elementos */
     }
