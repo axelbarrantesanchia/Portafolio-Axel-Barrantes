@@ -28,12 +28,12 @@ body {
 
 .header_menu {
     display: flex;
-    gap: 80px; /* Espaciado entre los enlaces */
+    gap: 40px; /* Espaciado entre los enlaces */
 }
 
 .header_menu_link {
     font-family: var(--fuente-montserrat);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
     font-weight: 600;
     text-decoration: none;
     color: var(--color-terciario);
@@ -48,9 +48,9 @@ body {
 .principal {
     display: flex;
     align-items: center;
-    margin: 1% 15%; /* Espaciado alrededor del contenedor principal */
+    margin: 1% 5%; /* Margen reducido para más espacio */
     justify-content: space-between;
-    gap: 82px;
+    gap: 20px; /* Espaciado reducido */
     overflow: hidden; /* Evita el desbordamiento en el contenedor principal */
 }
 
@@ -58,11 +58,11 @@ body {
     flex: 1; /* Permite que el contenido ocupe el espacio disponible */
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px; /* Espacio reducido entre elementos */
 }
 
 .principal_contenido_titulo {
-    font-size: 33px;
+    font-size: 24px; /* Tamaño de fuente reducido */
     font-family: "Krona One", sans-serif;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .class_principal_parrafo {
-    font-size: 1.7rem;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
     font-family: var(--fuente-montserrat);
 }
 
@@ -79,29 +79,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem; /* Espaciado reducido */
 }
 
 .principal_enlances_link {
     display: flex;
     width: 100%; /* Se asegura de que el enlace ocupe el ancho completo */
-    max-width: 300px; /* Limita el ancho máximo para evitar el desbordamiento */
+    max-width: 250px; /* Limita el ancho máximo para evitar el desbordamiento */
     text-align: center;
-    padding: 1.5px 0;
+    padding: 1px 0; /* Espaciado reducido */
     border-radius: 8px;
     font-family: var(--fuente-montserrat);
-    font-size: 1.2rem;
+    font-size: 1rem; /* Tamaño de fuente reducido */
     font-weight: 500;
     text-decoration: none;
     color: var(--color-secundario);
     border: 2px solid var(--color-terciario);
     justify-content: center;
-    gap: 12px;
+    gap: 8px; /* Espaciado reducido */
 }
 
 .principal___enlaces__sub {
     font-family: var(--fuente-krona);
-    font-size: 1.5rem;
+    font-size: 1.2rem; /* Tamaño de fuente reducido */
     font-weight: 400;
 }
 
@@ -110,8 +110,8 @@ body {
 }
 
 .presentacion__imagen {
-    width: 50%; /* Ajuste el tamaño para que no desborde */
-    max-width: 488px; /* Limita el tamaño máximo de la imagen */
+    width: 40%; /* Ajuste el tamaño para que no desborde */
+    max-width: 350px; /* Limita el tamaño máximo de la imagen */
 }
 
 @media (max-width: 575px) {
@@ -130,6 +130,6 @@ body {
         width: 100%; /* Asegura que el enlace ocupe todo el ancho disponible */
     }
     .principal_contenido {
-        gap: 20px; /* Reduce el espacio entre elementos */
+        gap: 10px; /* Reduce el espacio entre elementos */
     }
 }
