@@ -16,11 +16,10 @@ body {
     background-color: var(--color-primario);
     color: var(--color-secundario);
     font-family: "Montserrat", sans-serif;
-    overflow-x: hidden; /* Evita el desbordamiento horizontal */
 }
 
 .header {
-    padding: 1% 0 0 15%; /* Espaciado superior */
+    padding: 1% 15%; /* Espaciado superior y lateral */
 }
 
 .header_menu {
@@ -43,16 +42,15 @@ body {
 
 .principal {
     display: flex;
-    flex-direction: column; /* Cambia a columna para adaptarse mejor */
+    flex-direction: column; /* Cambia a columna para mejor disposición */
     align-items: center; /* Centra el contenido */
-    margin: 2% 5%; /* Margen alrededor del contenido */
+    margin: 40px 0; /* Margen superior e inferior */
 }
 
 .principal_contenido {
     text-align: center; /* Centra el texto */
     max-width: 800px; /* Limita el ancho del contenido */
-    margin-bottom: 40px; /* Aumenta el espacio entre texto e imagen */
-    margin-top: 60px; /* Agrega espacio arriba */
+    margin-bottom: 20px; /* Espacio entre contenido e imagen */
 }
 
 .principal_contenido_titulo {
@@ -69,40 +67,13 @@ body {
 .presentacion__imagen {
     width: 50%; /* Ajusta el tamaño de la imagen */
     max-width: 300px; /* Limita el tamaño máximo */
-}
-
-.principal_links {
-    display: flex;
-    flex-direction: column; /* Organiza enlaces en columna */
-    align-items: center; /* Centra los botones */
-    margin-top: 40px; /* Espacio arriba de los enlaces */
-}
-
-.principal_enlances_link {
-    display: flex;
-    width: 60%; /* Ajusta el ancho de los enlaces */
-    text-align: center;
-    padding: 10px; /* Espacio interior de los enlaces */
-    border-radius: 8px;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.2rem; /* Tamaño de fuente */
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--color-secundario);
-    border: 2px solid var(--color-terciario);
-    justify-content: center; /* Centra el contenido del enlace */
-    gap: 12px;
-    margin-bottom: 15px; /* Espacio entre botones */
-}
-
-.principal_enlances_link:hover {
-    background-color: var(--color-hover);
+    margin-bottom: 40px; /* Margen debajo de la imagen */
 }
 
 @media (max-width: 575px) {
     .header_menu {
         flex-direction: column; /* Cambia a columna en pantallas pequeñas */
-        align-items: center;
+        align-items: center; /* Centra los elementos */
     }
     .header_menu_link {
         font-size: 1rem; /* Reduce el tamaño de fuente */
