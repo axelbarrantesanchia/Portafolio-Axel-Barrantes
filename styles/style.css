@@ -134,53 +134,117 @@ body {
     }
 }
 
-/* Estilos generales para las secciones */
-.section {
-    padding: 2rem 5%;
-    margin-bottom: 2rem;
-    background-color: var(--color-primario);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap'); 
+
+:root {
+    --color-primario: #010004;
+    --color-secundario: #f6f6f6;
+    --color-terciario: #604CC3;
+    --color-hover: #f6f6f6;
+    --color-acento: #B38FF3;
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
 }
 
-/* Títulos de las secciones */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 2rem;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: var(--color-primario);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.header_menu {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.header_menu_link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-terciario);
+}
+
+.header_menu_link:hover {
+    color: var(--color-hover);
+    background-color: var(--color-terciario);
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background-color: var(--color-secundario);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
 .section-title {
     font-size: 1.8rem;
     font-family: var(--fuente-krona);
     color: var(--color-terciario);
     margin-bottom: 1rem;
-    text-align: left;
+    text-align: center;
+    position: relative;
 }
 
-/* Estilo para listas dentro de las secciones */
-.section-list {
+.section-title::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: var(--color-acento);
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
+}
+
+.section-list, .contact-info {
     list-style-type: none;
     font-family: var(--fuente-montserrat);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-secundario);
-}
-
-.section-list li {
-    margin-bottom: 0.5rem;
-}
-
-/* Estilos específicos para la sección de contacto */
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    color: var(--color-primario);
+    padding-left: 0;
+    text-align: center;
 }
 
 .contact-info a {
     font-family: var(--fuente-montserrat);
     font-size: 1rem;
-    color: var(--color-secundario);
+    color: var(--color-terciario);
     text-decoration: none;
 }
 
 .contact-info a:hover {
-    color: var(--color-terciario);
+    color: var(--color-hover);
 }
 
 .contact-info p {
@@ -188,7 +252,7 @@ body {
     font-size: 1rem;
 }
 
-/* Estilos para la experiencia laboral */
+/* Experiencia */
 .experience-item {
     margin-bottom: 1.5rem;
 }
@@ -211,14 +275,14 @@ body {
     font-family: var(--fuente-montserrat);
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-secundario);
+    color: var(--color-primario);
 }
 
-/* Estilos específicos para las referencias */
+/* Referencias */
 .references {
     font-family: var(--fuente-montserrat);
     font-size: 1rem;
-    color: var(--color-secundario);
+    color: var(--color-primario);
     line-height: 1.6;
 }
 
@@ -235,15 +299,16 @@ body {
     text-decoration: underline;
 }
 
-/* Adaptación móvil */
-@media (max-width: 575px) {
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header_menu {
+        flex-direction: column;
+    }
+
     .section {
-        padding: 2rem 3%;
-    }
-    .section-title {
-        font-size: 1.5rem;
-    }
-    .section-list {
-        font-size: 0.9rem;
+        padding: 1.5rem;
     }
 }
