@@ -1,49 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-:root{
+:root {
     --color-primario: #010004;
     --color-secundario: #f6f6f6;
     --color-terciario: #604CC3;
     --color-hover: #f6f6f6;
 
-    --fuente-montserrat: "Montserrat", sans serif;
-    --fuente-krona: "Krona One", sans serif:
+    --fuente-montserrat: "Montserrat", sans-serif;
+    --fuente-krona: "Krona One", sans-serif;
 }
-
 
 * {
     margin: 0;
-    border: 0;
-    }
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y border se incluyan en el tamaño total */
+}
 
-body{
+body {
     background-color: var(--color-primario);
     color: var(--color-secundario);
-    box-sizing: border-box;
+    overflow: hidden; /* Evita el desplazamiento */
 }
 
-.header{
-padding: 1% 0% 0% 15%;
+.header {
+    padding: 1% 0% 0% 15%;
 }
-.header_menu{
+
+.header_menu {
     display: flex;
     gap: 80px;
 }
 
-.header_menu_link{
-    font-family: (var(--fuente-montserrat));
+.header_menu_link {
+    font-family: var(--fuente-montserrat);
     font-size: 1.5rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-terciario);
-    
-.header_menu_link:hover{
+}
+
+.header_menu_link:hover {
     color: var(--color-hover); /* Color del texto al pasar el cursor */
     background-color: var(--color-terciario); /* Color de fondo al pasar el cursor */
     border-radius: 4px; /* Radio de borde para el efecto de fondo */
-}
-   
 }
 
 .principal {
@@ -61,7 +60,7 @@ padding: 1% 0% 0% 15%;
     gap: 40px;
 }
 
-.principal_contenido_titulo{
+.principal_contenido_titulo {
     font-size: 33px;
     font-family: "Krona One", sans-serif;
 }
@@ -99,20 +98,20 @@ padding: 1% 0% 0% 15%;
     gap: 12px;
 }
 
-.principal___enlaces__sub{
+.principal___enlaces__sub {
     font-family: var(--fuente-krona);
     font-size: 1.5rem;
     font-weight: 400;
 }
 
-.principal_enlances_link:hover{
-    background-color: var(--color-hover)
+.principal_enlances_link:hover {
+    background-color: var(--color-hover);
 }
 
-.imagenaxel{
+.imagenaxel {
     width: 488px;
-    
 }
+
 .class_principal_parrafo2 {
     font-size: 25.3px;
     font-family: var(--fuente-montserrat);
@@ -123,36 +122,21 @@ padding: 1% 0% 0% 15%;
 }
 
 @media (max-width: 575px) {
-    .header{
+    .header {
         padding: 5%;
     }
-    .header_menu{
+    .header_menu {
         justify-content: center;
     }
-    .principal{
+    .principal {
         flex-direction: column-reverse;
     }
 
     .principal_enlances_link {
-        display: flex;
-    width: 50%;
-    text-align: center;
-    padding: 1.5px 0;
-    border-radius: 8px;
-    font-family: var(--fuente-montserrat);
-    font-size: 1.2rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: var(--color-secundario);
-    border: 2px solid var(--color-terciario);
-    justify-content: center;
-    gap: 12px;
-        
-}
+        width: 100%; /* Asegúrate de que se ajuste en pantallas pequeñas */
+    }
 
-        .principal_contenido{
-    width: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-        }
+    .principal_contenido {
+        gap: 20px; /* Reduce el espacio entre elementos */
+    }
+}
